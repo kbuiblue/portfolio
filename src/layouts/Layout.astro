@@ -5,7 +5,7 @@ import theme from "@/data/theme";
 import SEOTags from "@/components/seo/SEOTags.astro";
 import type { HeadTags } from "@/utils/types/HeadTags";
 
-import "@fontsource/open-sans";
+import "@fontsource/jetbrains-mono";
 import "@/styles/tailwind.css";
 import "@/styles/post.css";
 
@@ -27,7 +27,7 @@ const headTags = Astro.props;
     <slot />
     <style is:global>
       html {
-        font-family: "Open Sans";
+        font-family: "Jetbrains Mono", sans-serif;
       }
     </style>
   </body>
