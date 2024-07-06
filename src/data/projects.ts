@@ -7,9 +7,9 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    title: "Dictionary App",
-    techs: ["ReactJS (NextJS)", "react-query", "zod"],
-    link: "https://github.com/MaeWolff/dictionary-app",
+    title: "Quizzical",
+    techs: ["Preact", "Mantine", "TypeScript"],
+    link: "https://quizzical-kb.netlify.app/",
   },
   {
     title: "Portfolio / Lina BLIDI",

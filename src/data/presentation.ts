@@ -6,31 +6,30 @@ type Social = {
 type Presentation = {
   mail: string;
   title: string;
+  subtitle: string;
   description: string;
   socials: Social[];
   profile?: string;
 };
 
 const presentation: Presentation = {
-  mail: "maxencewolff.pro@gmail.com",
-  title: "Hi, I’m Maxence 👋",
-  // profile: "/profile.webp",
-  description:
-    "Bonjour, i'm a *french frontend developer* with over *3 years* of web experience. I am currently working with *NextJS and Typescript*. Outside of work I complete my pokemon card collection and learning TypeScript.",
-  socials: [
-    {
-      label: "X",
-      link: "https://twitter.com/itsstormzz_",
-    },
-    {
-      label: "Bento",
-      link: "https://bento.me/m-wolff",
-    },
-    {
-      label: "Github",
-      link: "https://github.com/MaeWolff",
-    },
-  ],
+    mail: "kbuiblue@gmail.com",
+    title: "Hi, I’m Khanh 👋",
+    subtitle: "AKA *Marshall*",
+    profile: "/profile-pic.jpeg",
+    description:
+        `Xin chào, I am a *Vietnamese frontend developer* with *over 1 year* of web experience. I work primarily with *NextJS and Typescript*. 
+         Outside of work, I collect guitars and play indie video games.`,
+    socials: [
+        {
+            label: "LinkedIn",
+            link: "https://www.linkedin.com/in/k-bui/",
+        },
+        {
+            label: "Github",
+            link: "https://github.com/kbuiblue",
+        },
+    ],
 };
 
 export default presentation;
