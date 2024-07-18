@@ -3,7 +3,7 @@ type Social = {
   link: string;
 };
 
-type Presentation = {
+type hero = {
   mail: string;
   title: string;
   subtitle: string;
@@ -12,14 +12,13 @@ type Presentation = {
   profile?: string;
 };
 
-const presentation: Presentation = {
+const hero: hero = {
     mail: "kbuiblue@gmail.com",
     title: "Hi, I’m Khanh 👋",
     subtitle: "AKA *Marshall*",
-    profile: "/profile-pic.jpeg",
+    profile: "/src/content/images/profile-pic.jpeg",
     description:
-        `Xin chào, I am a *Vietnamese frontend developer* with *over 1 year* of web experience. I work primarily with *NextJS and Typescript*. 
-         Outside of work, I collect guitars and play indie video games.`,
+        `As a support developer with *2 years of experience in web development*, I strike the balance between technical ability and communication skills.`,
     socials: [
         {
             label: "LinkedIn",
@@ -32,4 +31,4 @@ const presentation: Presentation = {
     ],
 };
 
-export default presentation;
+export default hero;
