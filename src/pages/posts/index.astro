@@ -16,7 +16,7 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
       {
         posts.map((post) => (
           <a
-            class="group flex flex-col gap-2 border-t border-neutral-700 py-4 transition-all hover:text-neutral-100"
+            class="group flex flex-col gap-2 border-t border-neutral-700 py-4 transition-all hover:text-orange-500"
             href={`/posts/${post.slug}`}
           >
             <div class="flex w-full items-center justify-between">
@@ -29,17 +29,17 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
                   height="18"
                   viewBox="0 0 18 18"
                   fill="none"
-                  class="transition-all duration-300 group-hover:translate-x-1"
+                    class="transition-all duration-300 stroke-neutral-400 group-hover:translate-x-1"
                 >
                   <path
+                    class="group-hover:stroke-orange-500"
                     d="M5.25 12.75L12.75 5.25"
-                    stroke="#999999"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
+                    class="group-hover:stroke-orange-500"
                     d="M5.25 5.25H12.75V12.75"
-                    stroke="#999999"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
