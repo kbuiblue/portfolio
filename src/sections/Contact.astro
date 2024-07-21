@@ -1,0 +1,18 @@
+---
+import Link from "@/components/shared/Link.astro";
+import SocialLinks from "@/components/SocialLinks.astro";
+
+import hero from "@/data/hero";
+---
+
+<section class="flex flex-col gap-8">
+    <header class="flex w-full flex-row justify-between gap-2">
+        <h3 class="text-lg text-neutral-100">Get in Touch</h3>
+    </header>
+    <p>
+        Email me at <Link href={`mailto:${hero.mail}`} label={hero.mail} /> or follow
+        me via my social links.
+    </p>
+
+    <SocialLinks />
+</section>

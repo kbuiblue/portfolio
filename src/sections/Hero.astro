@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+
+import convertAsteriskToStrongTag from "@/utils/convertAsteriskToStrongTag";
+import profileImage from "@/content/images/profile-pic.jpeg";
+import SocialLinks from "@/components/SocialLinks.astro";
+
+import hero from "@/data/hero";
+---
+
+<section
+    class="flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-12"
+>
+    {
+        hero.profile && (
+            <Image
+                class="w-1/4 self-center rounded-full"
+                src={profileImage}
+                alt="Khanh 'Marshall' Bui's profile picture"
+            />
+        )
+    }
+
+    <div class="flex flex-col gap-8">
+        <h1 class="text-3xl text-neutral-100">
+            {hero.title}
+        </h1>
+        <h2
+            class="text-lg font-thin"
+            set:html={convertAsteriskToStrongTag(hero.subtitle)}
+        />
+
+        <p
+            class="w-auto max-w-[60ch] leading-6"
+            set:html={convertAsteriskToStrongTag(hero.description)}
+        />
+
+        <SocialLinks />
+    </div>
+</section>

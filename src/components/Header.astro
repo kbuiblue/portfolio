@@ -1,13 +1,13 @@
 ---
 import removeTrailingSlash from "@/utils/removeTrailingSlash";
-import Hero from "@/data/hero";
+import hero from "@/data/hero";
 
 const pathname = removeTrailingSlash(Astro.url.pathname);
 ---
 
 <header class="z-40 flex w-full flex-col gap-2 md:flex-row md:justify-between">
-  <a href={`mailto:${Hero.mail}`} class="hover:text-neutral-100"
-    >{Hero.mail}</a
+  <a href={`mailto:${hero.mail}`} class="hover:text-neutral-100"
+    >{hero.mail}</a
   >
 
   <nav role="navigation">
@@ -17,7 +17,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
           href="/"
           class:list={{
             ["hover:text-neutral-100"]: true,
-            ["text-neutral-100"]: pathname === "/",
+            ["text-orange-500"]: pathname === "/",
           }}>Home</a
         >
       </li>
@@ -27,7 +27,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
           href="/posts"
           class:list={{
             ["hover:text-neutral-100"]: true,
-            ["text-neutral-100"]: pathname === "/posts",
+            ["text-orange-500"]: pathname === "/posts",
           }}>Posts</a
         >
       </li>
