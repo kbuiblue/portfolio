@@ -1,8 +1,15 @@
 ---
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 
 import convertAsteriskToStrongTag from "@/utils/convertAsteriskToStrongTag";
 import profileImage from "@/content/images/profile-pic.jpeg";
+
+export const optimizedProfileImage = await getImage({
+    src: profileImage,
+    format: "webp",
+    width: 500,
+    height: 500,
+})
 import SocialLinks from "@/components/SocialLinks.astro";
 
 import hero from "@/data/hero";
@@ -15,7 +22,9 @@ import hero from "@/data/hero";
         hero.profile && (
             <Image
                 class="w-1/4 self-center rounded-full"
-                src={profileImage}
+                src={optimizedProfileImage.src}
+                width={optimizedProfileImage.attributes.width}
+                height={optimizedProfileImage.attributes.height}
                 alt="Khanh 'Marshall' Bui's profile picture"
             />
         )
