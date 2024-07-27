@@ -23,7 +23,7 @@ import { optimizedProfileImage } from "@/sections/Hero.astro";
     <head>
         <SEOTags {...headTags} />
         <ViewTransitions />
-        <link rel="preload" href={optimizedProfileImage.src} as="image" />
+        <link rel="preload prefetch" href={optimizedProfileImage.src} as="image" type="image/webp" />
     </head>
     <body
         class="mx-auto flex min-h-screen max-w-[872px] flex-col gap-9 bg-neutral-950 px-10 py-8 text-sm text-neutral-400 md:gap-20 md:py-16"
