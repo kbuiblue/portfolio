@@ -4,27 +4,65 @@ import { Icon } from "astro-icon/components";
 
 import googleAds from "@/content/images/accolades/google-ads.png";
 import customerJac from "@/content/images/accolades/customer-jac.png";
-import perfectCSAT from "@/content/images/accolades/perfect-csat.png";
-import applause1 from "@/content/images/accolades/applause-1.png";
-import applause2 from "@/content/images/accolades/applause-2.png";
+import promptAction from "@/content/images/accolades/prompt-action.png";
+import volcanicBeginner from "@/content/images/accolades/volcanic-beginner.png";
+import timelyService from "@/content/images/accolades/timely-service.png";
+import supportHuman from "@/content/images/accolades/support-human.png";
+
+// import Accolade from "@/components/AccoladeCard.astro";
 ---
 
 <section class="flex flex-col gap-8">
-  <h3 class="flex flex-row w-full gap-2 text-lg text-neutral-100">
-      Wall of Love <Icon
-          class="h-6 text-[#d6353a] animate-heart-pulse"
-          name="mdi:heart"
-      />
-  </h3>
-  <section class="flex flex-col gap-4">
-      <Image
-          class="rounded-md"
-          src={googleAds}
-          alt="Google Ads Accolade"
-      />
-      <Image class="rounded-md" src={customerJac} alt="" />
-      <Image class="rounded-md" src={perfectCSAT} alt="Perfect CSAT Accolade" />
-      <Image class="rounded-md" src={applause1} alt="" />
-      <Image class="rounded-md" src={applause2} alt="" />
-  </section>
+    <h3 class="flex flex-row w-full gap-2 text-lg text-neutral-100">
+        Wall of Love <Icon
+            class="h-6 text-[#d6353a] animate-heart-pulse"
+            name="mdi:heart"
+        />
+    </h3>
+    <div class="columns-2xs xl:columns-3 gap-2">
+        <a
+            class="h-min"
+            href="https://uk.trustpilot.com/reviews/668384ad70f6333dc05a1bf8"
+            target="blank"
+        >
+            <Image
+                class="rounded-md mb-2"
+                src={promptAction}
+                alt="Prompt Action Accolade"
+            />
+        </a>
+        <a
+            href="https://uk.trustpilot.com/reviews/65a0a0ab403ddf92386ebfcf"
+            target="blank"
+        >
+            <Image
+                class="rounded-md mb-2"
+                src={timelyService}
+                alt="Timely Service Accolade"
+            />
+        </a>
+        <a
+            class="hover:border-orange-500"
+            href="https://uk.trustpilot.com/reviews/65b0bd6949ef9d520408441d"
+            target="blank"
+        >
+            <Image
+                class="h-max rounded-md hover:border-orange-500 mb-2"
+                src={volcanicBeginner}
+                alt="Volcanic Beginner Accolade"
+            />
+        </a>
+
+        <Image
+            class="rounded-md mb-2"
+            src={supportHuman}
+            alt="Support Human of Week"
+        />
+        <Image class="rounded-md mb-2" src={customerJac} alt="" />
+        <Image
+            class="rounded-md mb-2"
+            src={googleAds}
+            alt="Google Ads Accolade"
+        />
+    </div>
 </section>
