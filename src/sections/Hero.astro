@@ -16,12 +16,12 @@ import hero from "@/data/hero";
 ---
 
 <section
-    class="flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-12"
+    class="flex flex-col gap-8 md:flex-row md:justify-start md:gap-24"
 >
     {
         hero.profile && (
             <Image
-                class="w-1/4 self-center rounded-full"
+                class="w-1/2 max-w-[225px] md:w-1/3 self-center rounded-full"
                 src={optimizedProfileImage.src}
                 width={optimizedProfileImage.attributes.width}
                 height={optimizedProfileImage.attributes.height}

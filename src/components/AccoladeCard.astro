@@ -1,0 +1,23 @@
+<!-- ---
+import { Image } from "astro:assets";
+
+import type { Accolade } from "@/data/accolades";
+
+type Props = Accolade;
+
+const { imageClass, linkClass, href, alt } = Astro.props;
+
+const imageMetaData: ImageMetadata = await import(src);
+---
+
+<a
+    class={linkClass}
+    href={href}
+    target="blank"
+>
+    <Image
+        class={imageClass}
+        src={imageMetaData}
+        alt={alt}
+    />
+</a> -->

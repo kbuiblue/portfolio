@@ -12,7 +12,7 @@ const formatTechs = (values: string[]) =>
 <>
   {
     isComingSoon && (
-      <div class="t group flex w-full flex-col justify-between gap-2 rounded-md border border-neutral-700 p-4 md:flex-row md:items-center">
+      <div class="t group flex w-full h-full flex-col self-center justify-between gap-2 rounded-md border border-neutral-700 p-4 xl:max-w-xl md:flex-row md:items-center">
         <div class="flex flex-col gap-2 md:flex-row md:items-center md:gap-4">
           <p class="text-neutral-100">{title}</p>
           <p>{formatTechs(techs)}</p>
@@ -26,7 +26,7 @@ const formatTechs = (values: string[]) =>
   {
     !isComingSoon && (
       <a
-        class="group flex w-full cursor-pointer flex-col justify-between gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover: -translate-y-2 hover:border-orange-500 md:flex-row md:items-center"
+        class="group flex w-full h-full min-h-[62px] cursor-pointer flex-col justify-between gap-2 rounded-md border xl:max-w-xl border-neutral-700 p-4 transition-all duration-300 hover:-translate-y-2 hover:border-orange-500 md:flex-row md:items-center"
         href={link}
         target="_blank"
         rel="noreferrer"
